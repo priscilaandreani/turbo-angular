@@ -1,0 +1,30 @@
+.container {
+  margin-top: 1rem;
+  background: #191d20;
+}
+
+h6 {
+  color: #6a6d79;
+}
+
+p{
+  font-size: 2rem;
+  font-weight: 600;
+  color: #dadee3;
+}
+
+.form-control{
+  background: #2d3037;
+  border: 1px solid #5d6170;
+  color: #dadee3;
+
+  resize: none;
+}
+
+.btn{
+  margin-top: 1rem;
+
+  background: rgb(220,58,54);
+  background: linear-gradient(0deg, rgba(220,58,54,1) 79%, rgba(243,90,78,1) 97%);
+  color: #fff;
+}
