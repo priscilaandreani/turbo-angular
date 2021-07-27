@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-6">
-      <app-progress></app-progress>
+      <app-progress [progress]="progress"></app-progress>
     </div>
     <div class="col-sm-6">
       <div class="d-flex justify-content-end">
@@ -11,19 +11,20 @@
   </div>
   <div class="row">
     <div class="col">
-      <h6>Traduza a frase:</h6>
-      <p>How are you?</p>
+      <h6>{{ instruction }} </h6>
+      <p>{{roundPhrase.phraseUS}}</p>
 
 
     </div>
     <div class="form-group">
-      <textarea class="form-control" name="text-area" id="text-area" rows="3"></textarea>
+      <textarea class="form-control" name="text-area" id="text-area" rows="3" (input)="updateAnswer($event)"
+        [value]="answer"></textarea>
     </div>
   </div>
   <div class="row">
     <div class="col">
       <div class="d-flex justify-content-end">
-        <button class="btn">Traduzir</button>
+        <button class="btn" (click)="verifyAnswer()">Verificar</button>
       </div>
     </div>
   </div>
