@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  public title: string = `turbo-angular`
+
   constructor() { }
 
   ngOnInit(): void {
