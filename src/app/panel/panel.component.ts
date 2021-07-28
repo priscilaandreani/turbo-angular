@@ -1,3 +1,4 @@
+import { ThrowStmt } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Phrase } from '../shared/phrase.model'
 import { PHRASE } from './phrase-mock'
@@ -17,6 +18,7 @@ export class PanelComponent implements OnInit {
 
   public progress: number = 0
 
+  public attempts: number = 3
 
   constructor() {
     this.updateRound()
@@ -35,9 +37,19 @@ export class PanelComponent implements OnInit {
 
       this.round++
       this.progress = this.progress + (100 / this.phrases.length)
+
+      if (this.round === 4) {
+        alert('Desafio concluído!')
+      }
+
       this.updateRound()
     } else {
+      this.attempts--
       alert('Tente novamente.')
+
+      if (this.attempts === -1) {
+        alert('Você perdeu :(')
+      }
     }
   }
 
