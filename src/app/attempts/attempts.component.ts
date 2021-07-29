@@ -17,7 +17,7 @@ export class AttemptsComponent implements OnInit, OnChanges {
   ]
 
 
-  constructor() { console.log(this.hearts); }
+  constructor() { }
 
   ngOnChanges() {
 
@@ -25,8 +25,6 @@ export class AttemptsComponent implements OnInit, OnChanges {
       let index = this.hearts.length - this.attempts
       this.hearts[index - 1].full = false
     }
-
-    console.log('tentatvias', this.attempts)
 
   }
 

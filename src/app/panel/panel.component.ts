@@ -1,5 +1,4 @@
-import { ThrowStmt } from '@angular/compiler';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Phrase } from '../shared/phrase.model'
 import { PHRASE } from './phrase-mock'
 @Component({
@@ -19,6 +18,9 @@ export class PanelComponent implements OnInit {
   public progress: number = 0
 
   public attempts: number = 3
+  
+  @Output() public endGame: EventEmitter<string> = new EventEmitter()
+
 
   constructor() {
     this.updateRound()
@@ -33,23 +35,23 @@ export class PanelComponent implements OnInit {
 
   verifyAnswer(): void {
     if (this.roundPhrase.phrasePT === this.answer) {
-      alert('A tradução está correta')
 
       this.round++
       this.progress = this.progress + (100 / this.phrases.length)
 
       if (this.round === 4) {
-        alert('Desafio concluído!')
+        this.endGame.emit('winner')
       }
 
       this.updateRound()
+
     } else {
       this.attempts--
-      alert('Tente novamente.')
 
       if (this.attempts === -1) {
-        alert('Você perdeu :(')
+        this.endGame.emit('loser')
       }
+      
     }
   }
 
