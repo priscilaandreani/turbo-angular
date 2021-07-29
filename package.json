@@ -11,19 +11,19 @@
     "test": "ng test"
   },
   "engines": {
-    "node": "14.x",
+    "node": "12.x",
     "npm": "6.x"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "12.1.0-",
-    "@angular/common": "12.1.0-",
-    "@angular/compiler": "12.1.0-",
-    "@angular/core": "12.1.0-",
-    "@angular/forms": "12.1.0-",
-    "@angular/platform-browser": "12.1.0-",
-    "@angular/platform-browser-dynamic": "12.1.0-",
-    "@angular/router": "12.1.0-",
+    "@angular/animations": "~12.1.0-",
+    "@angular/common": "~12.1.0-",
+    "@angular/compiler": "~12.1.0-",
+    "@angular/core": "~12.1.0-",
+    "@angular/forms": "~12.1.0-",
+    "@angular/platform-browser": "~12.1.0-",
+    "@angular/platform-browser-dynamic": "~12.1.0-",
+    "@angular/router": "~12.1.0-",
     "bootstrap": "^5.0.2",
     "express": "^4.17.1",
     "rxjs": "~6.6.0",
