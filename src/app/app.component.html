@@ -10,6 +10,9 @@
         <div class="col">
           <h3 class="text-center" style="color: #dadee3">Fim de jogo</h3>
           <h2 class="text-center" style="color: rgba(243,90,78,1)">Você perdeu :(</h2>
+          <div class="d-flex justify-content-center" style="margin-top: 3.5rem">
+            <button class="btn btn-secondary" (click)="tryAgain()">Jogar novamente</button>
+          </div>
         </div>
       </div>
     </div>
@@ -20,6 +23,9 @@
       <div class="col">
         <h3 class="text-center" style="color: #dadee3">Fim de jogo</h3>
         <h2 class="text-primary text-center" >Parabéns! Missão cumprida com sucesso.</h2>
+        <div class="d-flex justify-content-center" style="margin-top: 3.5rem">
+        <button class="btn btn-secondary" (click)="tryAgain()">Jogar novamente</button>
+      </div>
       </div>
     </div>
   </ng-template>

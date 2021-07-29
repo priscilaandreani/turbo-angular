@@ -8,11 +8,16 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   public isPlaying: boolean = true
-  public typeEnd: string
+  public typeEnd: string | undefined
 
   public endGame(type: string){
     this.isPlaying = false
     this.typeEnd = type
+  }
+
+  public tryAgain(): void { 
+    this.isPlaying = true
+    this.typeEnd = undefined
   }
 
 }
