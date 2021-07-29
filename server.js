@@ -4,9 +4,14 @@ const path = require('path');
 
 const app = express();
 
-// Serve only the static files form the dist directory
-app.use(express.static('./dist/turbo-angular'));
+const appName = 'turbo-angular'
+const outputPath = `${__dirname}/dist/${appName}`
 
+// Serve only the static files form the dist directory
+app.use(express.static(outputPath));
+
+
+// Redirect to index.html
 app.get('/*', (req, res) =>
     res.sendFile('index.html', {root: 'dist/turbo-angular/'}),
 );
