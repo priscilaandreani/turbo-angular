@@ -6,6 +6,7 @@ Study project to learn Angular 4's base
 
 - Angular 4
 - Typescript
+- Bootstrap 5.0.2
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.3.
 
